@@ -33,6 +33,7 @@ Data Types : 값의 종류와 그 값에 적용 가능한 연산과 동작을 �
    - 유한 정밀도
      - 컴퓨터 메모리 용량이 한정돼 있고 한 숫자에 대해 저장하는 용량이 제한 됨
      - 0.6666666666666666과 1.6666666666666667은 제한된 양의 메모리에 저장할 수 있는 2/3과 5/3에 가장 가까운 값
+
    - 실수 연산 시 주의사항
      - 컴퓨터는 2진법를 사용, 사람은 10진법을 사용
      - 이때 10진수 0.1은 2진수로 표현하면 0.00011001100110011001100..같이 무한대로 반복
@@ -40,11 +41,12 @@ Data Types : 값의 종류와 그 값에 적용 가능한 연산과 동작을 �
      - 0.1의 경우 3602879701896397 / 2 \*\* 55 이며 0.1에 가깝지만 정확히 동일하지는 않음
      - 이런 과정에서 예상치 못한 결과가 나타남
      - 이런 증상을 Floating point rounding error라고 함
+
    - 실수 연산 시 해결책
      - 두 수의 차이가 매우 작은 수보다 작은지를 확인하거나 math모듈 활용
-       ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87462b3b-15bf-44d8-8ad3-2ebfdc1c5dfd/Untitled.png)
-   - 지수 표현 방식 (10^)
+       <img src = "../img/Data_Types_기초_1.png"></img>
 
+   - 지수 표현 방식 (10^)
      - e 또는 E를 사용한 지수 표현
 
        ```python
@@ -102,7 +104,7 @@ Sequence Type : 여러 개의 값들을 순서대로 나열하여 저장하는 �
         이 다음은 엔터
         입니다.
         '''
-        print('이 다음은 엔터\n입니다.'
+        print('이 다음은 엔터\n입니다.')
         ```
 
     - String Interpolation : 문자열 내에 변수나 표현식을 삽입하는 방법
@@ -151,33 +153,33 @@ Sequence Type : 여러 개의 값들을 순서대로 나열하여 저장하는 �
 
     - 문자열은 불변 (변경 불가)
 
-      ````python
+      ```python
       my_str = 'hello'
 
            # TypeError : 'str' object does not support item assignment
            my_str[1] = 'z'
-           ```
-           → 필요시, 새로운 문자열을 만들어낼 생각으로 문제에 접근
+      ```
+      → 필요시, 새로운 문자열을 만들어낼 생각으로 문제에 접근
 
-      > 인덱스(Index) : 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자
-      >
-      > |       | h   | e   | l   | l   | o   |
-      > | ----- | --- | --- | --- | --- | --- |
-      > | index | 0   | 1   | 2   | 3   | 4   |
-      > | index | -5  | -4  | -3  | -2  | -1  |
-      ````
+> 인덱스(Index) : 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자
+>
+> |       | h   | e   | l   | l   | o   |
+> | ----- | --- | --- | --- | --- | --- |
+> | index | 0   | 1   | 2   | 3   | 4   |
+> | index | -5  | -4  | -3  | -2  | -1  |
+    
 
 > 슬라이싱(slicing) : 시퀀스의 일부분을 선택하여 추출하는 작업
 >
 > → 시작 인덱스와 끝 인덱스를 지정하여 해당 범위의 값을 포함하는 새로운 시퀀스를 생성
 >
-> - slicing 예시 `my_str[2:4]` > ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49902072-b9c3-46ba-9a8e-91eeeaa33fa2/Untitled.png)
-> - slicing 예시 `my_str[:3]` > ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/11fcabd8-24fa-4e5b-b96d-eaa32ce52ea0/Untitled.png)
-> - slicing 예시 `my_str[3:]` > ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6b1ed3e-fe54-47dd-93ff-01e25d4a0327/Untitled.png)
+> - slicing 예시 `my_str[2:4]` > <img src = "../img/Data_Types_기초_2.png"></img>
+> - slicing 예시 `my_str[:3]` > <img src = "../img/Data_Types_기초_3.png"></img>
+> - slicing 예시 `my_str[3:]` > <img src = "../img/Data_Types_기초_4.png"></img>
 > - slicing 예시 `my_str[0:5:2]` step을 지정하여 추출
->   ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e0a8e04-bc44-4d17-a676-75820ded8fd0/Untitled.png)
+>   <img src = "../img/Data_Types_기초_5.png"></img>
 > - slicing 예시 `my_str[::-1]` step이 음수일 경우? 문자열 뒤집기!
->   ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f61f713f-3b68-4da0-b416-829b66dc4a63/Untitled.png)
+>   <img src = "../img/Data_Types_기초_6.png"></img>
 
 2. list (리스트) : 여러 개의 값을 순서대로 저장하는 변경 가능한 시퀀스 자료형
 
@@ -431,7 +433,7 @@ Collection : 여러 개의 항목 또는 요소를 담는 자료 구조 (str, li
 
   가변이라는 것은? 안에 있는 것의 참조의 방향을 바꾸면 됨. (리스트는 객체들의 참조를 모아놓은 컬렉션이라고 부르기도 함)
   하지만 문자열은 문자열이 통째로 메모리 주소 하나에 저장되기 때문에 불변이다.
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccedeb54-f170-4ed5-a557-8ef24fe51e7f/Untitled.png)
+  <img src = "../img/Data_Types_기초_7.png"></img>
 
 # Type Conversion
 

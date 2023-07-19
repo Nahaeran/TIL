@@ -27,9 +27,8 @@
 3. **Repositories**
     
     : 버전 이력과 파일들이 영구적으로 저장되는 영역. 모든 버전과 변경 이력이 기록됨
-    
 
-![Untitled](https://velog.velcdn.com/images/hyun_ha/post/78a68c72-8686-4048-87c7-3ad1c6c6557c/image.png)
+<img src = "../img/GIT기초_1.png"></img>
         
         Untracked    →    Modified    →    Nothing to commit, working tree clean
         
