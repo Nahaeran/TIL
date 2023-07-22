@@ -31,10 +31,12 @@ Data Types : 값의 종류와 그 값에 적용 가능한 연산과 동작을 �
 2. float (실수 자료형) : 실수를 표현하는 자료형 프로그래밍 언어에서 float는 실수에 대한 근삿값임
 
    - 유한 정밀도
+
      - 컴퓨터 메모리 용량이 한정돼 있고 한 숫자에 대해 저장하는 용량이 제한 됨
      - 0.6666666666666666과 1.6666666666666667은 제한된 양의 메모리에 저장할 수 있는 2/3과 5/3에 가장 가까운 값
 
    - 실수 연산 시 주의사항
+
      - 컴퓨터는 2진법를 사용, 사람은 10진법을 사용
      - 이때 10진수 0.1은 2진수로 표현하면 0.00011001100110011001100..같이 무한대로 반복
      - 무한대 숫자를 그대로 저장할 수 없어서 사람이 사용하는 10진법의 근사값만 표시
@@ -43,10 +45,12 @@ Data Types : 값의 종류와 그 값에 적용 가능한 연산과 동작을 �
      - 이런 증상을 Floating point rounding error라고 함
 
    - 실수 연산 시 해결책
+
      - 두 수의 차이가 매우 작은 수보다 작은지를 확인하거나 math모듈 활용
        <img src = "../img/Data_Types_기초_1.png"></img>
 
    - 지수 표현 방식 (10^)
+
      - e 또는 E를 사용한 지수 표현
 
        ```python
@@ -159,6 +163,7 @@ Sequence Type : 여러 개의 값들을 순서대로 나열하여 저장하는 �
            # TypeError : 'str' object does not support item assignment
            my_str[1] = 'z'
       ```
+
       → 필요시, 새로운 문자열을 만들어낼 생각으로 문제에 접근
 
 > 인덱스(Index) : 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자
@@ -167,18 +172,29 @@ Sequence Type : 여러 개의 값들을 순서대로 나열하여 저장하는 �
 > | ----- | --- | --- | --- | --- | --- |
 > | index | 0   | 1   | 2   | 3   | 4   |
 > | index | -5  | -4  | -3  | -2  | -1  |
-    
 
 > 슬라이싱(slicing) : 시퀀스의 일부분을 선택하여 추출하는 작업
 >
 > → 시작 인덱스와 끝 인덱스를 지정하여 해당 범위의 값을 포함하는 새로운 시퀀스를 생성
 >
-> - slicing 예시 `my_str[2:4]` > <img src = "../img/Data_Types_기초_2.png"></img>
-> - slicing 예시 `my_str[:3]` > <img src = "../img/Data_Types_기초_3.png"></img>
-> - slicing 예시 `my_str[3:]` > <img src = "../img/Data_Types_기초_4.png"></img>
+> - slicing 예시 `my_str[2:4]` >
+>
+>   <img src = "../img/Data_Types_기초_2.png"></img>
+>
+> - slicing 예시 `my_str[:3]` >
+>
+>   <img src = "../img/Data_Types_기초_3.png"></img>
+>
+> - slicing 예시 `my_str[3:]` >
+>
+>   <img src = "../img/Data_Types_기초_4.png"></img>
+>
 > - slicing 예시 `my_str[0:5:2]` step을 지정하여 추출
+>
 >   <img src = "../img/Data_Types_기초_5.png"></img>
+>
 > - slicing 예시 `my_str[::-1]` step이 음수일 경우? 문자열 뒤집기!
+>
 >   <img src = "../img/Data_Types_기초_6.png"></img>
 
 2. list (리스트) : 여러 개의 값을 순서대로 저장하는 변경 가능한 시퀀스 자료형
